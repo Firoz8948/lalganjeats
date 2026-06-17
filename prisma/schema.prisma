@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Registration {
+  id        Int      @id @default(autoincrement())
+  village   String
+  mobile    String   @unique
+  createdAt DateTime @default(now())
+
+  @@index([village])
+}
