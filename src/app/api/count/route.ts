@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export const revalidate = 60; // revalidate every 60 seconds
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
